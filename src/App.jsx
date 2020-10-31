@@ -1,29 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter as Router, NavLink, Switch, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+//Styling
 import styles from './App.modules.css';
-import APOD from './Components/APOD.jsx';
-import Rovers from './Components/Rovers.jsx';
-import Weather from './Components/Weather.jsx';
+// Components
+import Navbar from './Components/Navbar/Navbar.jsx'
+import APOD from './Components/APOD/APOD.jsx';
+import Rovers from './Components/Rovers/Rovers.jsx';
+import Weather from './Components/Weather/Weather.jsx';
 
 const App = () => {
   return (
     <div>
-      <div className={styles.container}>
-        <NavLink className={styles.navElm} to="/" active="selected">
-          Home
-        </NavLink>
-        <NavLink className={styles.navElm} to="/imageOfTheDay" active="selected">
-          APOD
-        </NavLink>
-        <NavLink className={styles.navElm} to="/weather" active="selected">
-          Mars Weather
-        </NavLink>
-        <NavLink className={styles.navElm} to="/rover" active="selected">
-          Rovers
-        </NavLink>
-      </div>
-
+      <Navbar />
       <Switch>
         <Route path="/imageOfTheDay">
           <APOD />

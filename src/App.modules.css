@@ -2,23 +2,3 @@ body {
   margin: 0;
 }
 
-.hw {
-  background-color: lightgoldenrodyellow;
-}
-
-.container {
-  border-bottom: 2px black solid;
-  padding: 1rem 0;
-  margin: 0;
-}
-
-.navElm {
-  padding: 1rem;
-  color: rgb(56, 55, 55);
-  text-decoration: none;
-}
-
-.selected {
-  color: red;
-  font-weight: bold;
-}
