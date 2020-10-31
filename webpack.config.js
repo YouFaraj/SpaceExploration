@@ -10,15 +10,19 @@ module.exports = {
   watch: true,
   module: {
     rules: [
-      {
-        test: /\.m?jsx?$/,
-        exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-react', '@babel/preset-env']
+        {
+          test: /\.jsx?$/,
+          exclude: /(node_modules|bower_components)/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env', '@babel/preset-react']
           }
         }
+      },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
       }
     ]
   }

@@ -2,15 +2,16 @@ const express = require('express');
 const app = express();
 const PORT = 3000;
 const axios = require('axios');
+const Path = require('path');
 require('dotenv').config()
 
 
-
+app.use(express.static(Path.join(__dirname, '../dist')))
 //middleware
 app.use(express.json());
 
 // send the file bundle with the image of the day.
-app.get('/', (req, res) => {
+app.get('/imageoftheday', (req, res) => {
   axios.get(`https://api.nasa.gov/planetary/apod?api_key=${process.env.API_KEY}`)
   .then(pictureOfTheDay => res.send(pictureOfTheDay.data))
   .catch(err => console.error('THIS ERROR IS FROM HOME: ', err))
