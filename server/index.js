@@ -10,6 +10,7 @@ app.use(express.static(Path.join(__dirname, '../dist')))
 //middleware
 app.use(express.json());
 
+
 // send the file bundle with the image of the day.
 app.get('/api/imageoftheday', (req, res) => {
   axios.get(`https://api.nasa.gov/planetary/apod?api_key=${process.env.API_KEY}`)
