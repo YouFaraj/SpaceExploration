@@ -16,6 +16,7 @@ const App = () => {
     <div>
       <Navbar />
       <Switch>
+        <Route exact path="/"><h1>Hello From Home</h1></Route>
         <Route exact path="/spirit"> <CardList /> </Route>
         <Route exact path="/curiosity"> <CardList /> </Route>
         <Route exact path="/random"> <Random /> </Route>

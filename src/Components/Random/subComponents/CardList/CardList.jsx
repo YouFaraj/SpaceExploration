@@ -10,21 +10,20 @@ const CardList = ({term}) => {
   // limits the images to 5 and shapes the data to an array of urls
   const firstFiveImages = (images, imageArray = []) => {
     for(var image of images) {
-      if(imageArray.length === 5) return imageArray;
+      if(imageArray.length === 5 ) break;
       imageArray.push(image.links[0].href)
     }
-    return imageArray;
+    setImages(imageArray)
   }
 
   useEffect(() => {
     axios.get(`/api/random/${term}`)
-    .then(response => setImages(response.data))
+    .then(response => firstFiveImages(response.data))
     .catch(err => console.error("FROM RANDOM CARDLIST: ", err))
-  }, [images])
+  }, [term])
 
-  const fiveImages = firstFiveImages(images);
   return (
-    typeof images === "string" ? "Loading" : fiveImages.map((elm, index) => <Card key={index} data={elm} />)
+    typeof images === "string" ? "Loading" : images.map((elm, index) => <Card key={index} data={elm} />)
   )
 }
 
