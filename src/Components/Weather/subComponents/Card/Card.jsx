@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './WeatherCard.modules.css';
+import styles from './Card.modules.css';
 
 
 const Card = ({subData}) => {

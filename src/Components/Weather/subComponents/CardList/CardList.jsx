@@ -1,13 +1,19 @@
 import React, {useState} from 'react';
 import styles from './CardList.modules.css';
-import Card from '../WeatherCard/WeatherCard.jsx';
+import Card from '../Card/Card.jsx';
 
 const CardList = ({listData}) => {
   /////// helper functions
   // filters extra keys coded into Nasa API
   const filterData = (data) => {
+    console.log(data)
     delete data['sol_keys'];
     delete data['validity_checks'];
+    for(var key in data) {
+      if(!data[key].AT) {
+        delete data[key];
+      }
+    }
     return data;
   }
   // places inner objects in an array and adds a day key
@@ -20,8 +26,8 @@ const CardList = ({listData}) => {
     return arrayOfObjs;
   }
   ////////
-  const newListData = putObjectsInArray(filterData(listData));
 
+  const newListData = putObjectsInArray(filterData(listData));
   return (
     <div className={styles.container}>
       <h1>Martian Weather: </h1>
