@@ -1,8 +1,16 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import axios from 'axios';
 
 const APOD = () => {
-  return  <h1>Hello from picture of the day</h1>
-}
+  const [image, setImage] = useState("#")
 
+  useEffect(() => {
+    axios.get("/api/imageOfTheDay")
+    .then(response => setImage(response.data.hdurl))
+    .catch(err => console.error("FROM APOD: ", err))
+  }, [])
+
+  return  <img src={image} width="200px" height="300px" />
+}
 
 export default APOD;

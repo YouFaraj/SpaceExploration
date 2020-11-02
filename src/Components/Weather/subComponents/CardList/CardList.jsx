@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import styles from './CardList.modules.css';
-import Card from '../Card/Card.jsx';
+import Card from '../WeatherCard/WeatherCard.jsx';
 
 const CardList = ({listData}) => {
   /////// helper functions
