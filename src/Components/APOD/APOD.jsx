@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import APODCard from './subComponents/APODCard/APODCard.jsx'
+import Card from './subComponents/Card/Card.jsx'
 
 const APOD = () => {
   const [data, setData] = useState(true)
@@ -12,7 +12,7 @@ const APOD = () => {
   }, [])
 
   return  (
-    typeof data === "boolean" ? "Loading" : <APODCard subData={data} />
+    typeof data === "boolean" ? "Loading" : <Card subData={data} />
   )
 }
 
