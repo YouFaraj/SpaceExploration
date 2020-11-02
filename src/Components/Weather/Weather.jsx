@@ -3,15 +3,18 @@ import axios from 'axios';
 import CardList from './subComponents/CardList/CardList.jsx';
 
 const Weather = () => {
-  const [data, setData] = useState({})
+  const [data, setData] = useState("")
+
 
   useEffect(() => {
-    axios.get('/api/weather')
+    axios.get("/api/weather")
     .then(response => setData(response.data))
-    .catch(err => console.error('FROM WEATHER: ', err))
+    .catch(err => console.error("FROM WEATHER: ", err))
   }, [])
 
-  return <CardList listData={data} />
+  return(
+      typeof data === "string" ? "Loading" : <CardList listData={data} />
+    )
 }
 
 export default Weather;

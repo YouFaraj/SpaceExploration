@@ -14,15 +14,15 @@ const App = () => {
     <div>
       <Navbar />
       <Switch>
-        <Route path="/imageOfTheDay">
+        <Route exact path="/imageOfTheDay">
           <APOD />
         </Route>
 
-        <Route path="/weather">
+        <Route exact path="/weather">
           <Weather />
         </Route>
 
-        <Route path="/rover">
+        <Route exact path="/rover">
           <Rovers />
         </Route>
       </Switch>
