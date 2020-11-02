@@ -9,6 +9,7 @@ import Navbar from './Components/Navbar/Navbar.jsx'
 import APOD from './Components/APOD/APOD.jsx';
 import Rovers from './Components/Rovers/Rovers.jsx';
 import Weather from './Components/Weather/Weather.jsx';
+import Random from './Components/Random/Random.jsx';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Route exact path="/oppurtunity"> <CardList /> </Route>
         <Route exact path="/curiosity"> <CardList /> </Route>
         <Route exact path="/perseverance"> <CardList /> </Route>
+        <Route exact path="/random"> <APOD /><Random /> </Route>
         <Route exact path="/imageOfTheDay"> <APOD /> </Route>
         <Route exact path="/weather"> <Weather /> </Route>
         <Route exact path="/rover"> <Rovers /> </Route>

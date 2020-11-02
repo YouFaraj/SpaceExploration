@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 
 const Navbar = () => {
   // [route, word] creates links, can add more if needed place in order needed
-  var navElements = [['/', 'Home'], ['/imageOfTheDay', 'APOD'], ['/weather', 'Mars Weather'], ['/rover', 'Rovers']]
+  var navElements = [['/', 'Home'], ['/imageOfTheDay', 'APOD'], ['/weather', 'Martian Weather'], ['/rover', 'Rovers'], ['/random', 'Random Pics']]
   return (
     <div className={styles.container}>
       {navElements.map((elm, index) => <Link key={index} className={styles.navElm} to={elm[0]}>{elm[1]}</Link>)}
