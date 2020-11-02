@@ -29,8 +29,10 @@ app.get('/api/weather', (req, res) => {
 })
 
 // returns an obj of pics and info
-app.get('/api/rover', (req, res) => {
-  axios.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2020-6-3&api_key=${process.env.API_KEY}`)
+app.get('/api/rover/:name&&:date', (req, res) => {
+  const date = req.params.date;
+  const name = req.params.name;
+  axios.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/${name}/photos?earth_date=${date}&api_key=${process.env.API_KEY}`)
   .then(roverInfo => res.send(roverInfo.data))
   .catch(err => console.error('THIS ERROR IS FROM ROVER: ', err))
 })

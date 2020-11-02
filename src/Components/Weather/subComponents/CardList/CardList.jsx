@@ -6,7 +6,6 @@ const CardList = ({listData}) => {
   /////// helper functions
   // filters extra keys coded into Nasa API
   const filterData = (data) => {
-    console.log(data)
     delete data['sol_keys'];
     delete data['validity_checks'];
     for(var key in data) {
