@@ -6,3 +6,5 @@ const Random = () => {
     <h1>Hello From Random</h1>
   )
 }
+
+export default Random;

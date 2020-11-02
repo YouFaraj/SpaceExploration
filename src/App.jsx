@@ -21,7 +21,7 @@ const App = () => {
         <Route exact path="/oppurtunity"> <CardList /> </Route>
         <Route exact path="/curiosity"> <CardList /> </Route>
         <Route exact path="/perseverance"> <CardList /> </Route>
-        <Route exact path="/random"> <APOD /><Random /> </Route>
+        <Route exact path="/random"> <Random /> </Route>
         <Route exact path="/imageOfTheDay"> <APOD /> </Route>
         <Route exact path="/weather"> <Weather /> </Route>
         <Route exact path="/rover"> <Rovers /> </Route>
