@@ -3,7 +3,7 @@ import styles from './Navbar.modules.css';
 import {Link} from 'react-router-dom';
 
 const Navbar = () => {
-  // [route, word] creates links, can add more if needed place in order needed
+  // [route, word] creates links. Can add more if needed. Place in order desired
   var navElements = [['/', 'Home'], ['/imageOfTheDay', 'APOD'], ['/weather', 'Martian Weather'], ['/rover', 'Rovers'], ['/random', 'Random Pics']]
   return (
     <div className={styles.container}>
