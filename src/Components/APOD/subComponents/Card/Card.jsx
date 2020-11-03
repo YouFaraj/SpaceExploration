@@ -1,11 +1,16 @@
 import React from 'react';
+import styles from './Card.modules.css';
 
 const APODCard = ({subData}) => {
   return (
     <div>
-      <h3>Astronomy picture of the day</h3>
-      <img src={subData.hdurl} alt="" width="800px" height="700px" />
-      <p>{subData.explanation}</p>
+      <div className={styles.card}>
+        <img src={subData.hdurl} alt="" className={styles.img} />
+        <div className={styles.infoBox}>
+          <h3 className={styles.title}>Astronomy picture of the day</h3>
+          <p className={styles.info}>{subData.explanation}</p>
+        </div>
+      </div>
     </div>
   )
 }

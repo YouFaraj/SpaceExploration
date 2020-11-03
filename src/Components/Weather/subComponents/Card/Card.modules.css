@@ -1,5 +1,12 @@
 .container {
-  padding: 5rem;
-  margin: 1rem;
-  border: 2px solid black;
+  width: 24%;
+  height: 35%;
+  border-radius: 10px;
+  color: rgb(76, 77, 78);
+  border-radius: 26px;
+  background: transparent;
+  box-shadow:  5px 5px 10px #161616,
+               -5px -5px 10px #5a5a5a;
+  padding: 2rem;
+  margin: 3rem 2rem;
 }

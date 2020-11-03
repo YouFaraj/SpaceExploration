@@ -1,4 +1,15 @@
-#container {
-  border: solid black 2px;
+.container {
+  width: 90%;
+  background-size: cover;
   display: flex;
+  flex-direction: row;
+}
+
+
+.title {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 2rem;
+  color: rgb(8, 8, 8);
+  margin: 0;
+  padding: 3rem;
 }
