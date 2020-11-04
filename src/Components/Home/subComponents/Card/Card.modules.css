@@ -1,0 +1,10 @@
+.bg {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 96vh;
+  background-size: cover;
+  background-position: center;
+  will-change: opacity;
+}

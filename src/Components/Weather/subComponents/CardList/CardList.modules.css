@@ -1,15 +1,20 @@
 .container {
-  width: 90%;
+  width: 100vw;
   background-size: cover;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
+.cardContainer {
+  display: flex;
+  justify-content: center;
+}
 
 .title {
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   font-size: 2rem;
-  color: rgb(8, 8, 8);
+  color: rgb(215, 255, 38);
   margin: 0;
   padding: 3rem;
 }

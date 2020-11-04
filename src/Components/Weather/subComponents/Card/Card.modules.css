@@ -18,3 +18,11 @@
   box-shadow: inset -18px 18px 9px #242424,
               inset 18px -18px 9px #404040;
 }
+
+.cold {
+  color: rgb(34, 120, 200);
+}
+
+.hot {
+  color: rgba(255, 63, 15, 0.801);
+}

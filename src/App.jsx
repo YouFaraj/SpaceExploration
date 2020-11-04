@@ -10,13 +10,14 @@ import APOD from './Components/APOD/APOD.jsx';
 import Rovers from './Components/Rovers/Rovers.jsx';
 import Weather from './Components/Weather/Weather.jsx';
 import Random from './Components/Random/Random.jsx';
+import Home from './Components/Home/Home.jsx';
 
 const App = () => {
   return (
     <div>
       <Navbar />
       <Switch>
-        <Route exact path="/"><h1>Hello From Home</h1></Route>
+        <Route exact path="/"> <Home /> </Route>
         <Route exact path="/spirit"> <CardList /> </Route>
         <Route exact path="/curiosity"> <CardList /> </Route>
         <Route exact path="/random"> <Random /> </Route>

@@ -29,8 +29,12 @@ const CardList = ({listData}) => {
   const newListData = putObjectsInArray(filterData(listData));
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Martian Weather: </h1>
-      {newListData.map((elm, index) => <Card key={index} subData={elm} />)}
+      <div>
+        <h1 className={styles.title}>Martian Weather: </h1>
+      </div>
+      <div className={styles.cardContainer}>
+        {newListData.map((elm, index) => <Card key={index} subData={elm} />)}
+      </div>
     </div>
   )
 }
