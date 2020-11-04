@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import Card from '../Card/Card.jsx';
 import axios from 'axios';
+import styles from './CardList.modules.css';
 
 
 const CardList = ({term}) => {
@@ -23,7 +24,9 @@ const CardList = ({term}) => {
   }, [term])
 
   return (
-    typeof images === "string" ? "Loading" : images.map((elm, index) => <Card key={index} data={elm} />)
+    <div className={styles.container}>
+      {typeof images === "string" ? "Loading" : images.map((elm, index) => <Card key={index} data={elm} />)}
+    </div>
   )
 }
 

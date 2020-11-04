@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.info {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 13px;
+  color: rgb(215, 255, 38);
+  padding: 1.3rem;
+  margin: 1.3rem;
+  background: #323232;
+  box-shadow:  -18px 18px 9px #242424,
+               18px -18px 9px #404040;
+
+}

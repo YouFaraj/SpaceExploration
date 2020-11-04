@@ -1,22 +1,22 @@
 .container {
   background: linear-gradient(145deg, #323232, #3c3c3c);
-  box-shadow:  5px 5px 10px #161616,
-               -5px -5px 10px #5a5a5a;
-
   padding: 1.5rem;
   margin: 0;
+  background: #323232;
+  box-shadow:  -18px 18px 9px #242424,
+               18px -18px 9px #404040;
 }
 
 .navElm:hover {
-  border-radius: 15px;
-  background: #383838;
-  box-shadow: inset 5px 5px 10px #161616,
-              inset -5px -5px 10px #5a5a5a;
-  color: rgb(185, 185, 185);
+  color: rgb(215, 255, 38);
+  border-radius: 13px;
+  background: #323232;
+  box-shadow: inset -18px 18px 9px #242424,
+              inset 18px -18px 9px #404040;
 }
 
 .navElm {
   padding: 1rem;
-  color: #c5c4c4;
+  color: aliceblue;
   text-decoration: none;
 }

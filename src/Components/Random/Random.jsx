@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import axios from 'axios';
 import CardList from './subComponents/CardList/CardList.jsx';
+import styles from './Random.modules.css';
+
 
 const Random = () => {
   const [searchTerm, setSearchTerm] = useState('')
@@ -11,13 +13,12 @@ const Random = () => {
   const updateSearchTerm = (e) => setSearchTerm(term);
 
   return (
-    <div>
-      <h1>Here you can look up any images in the Nasa library</h1>
-      <label>
-        Search: <input onChange={updateTerm} value={term} type="text" />
+    <div className={styles.container}>
+      <label className={styles.label}>
+        <span className={styles.search}>Search: </span><input className={styles.input} placeholder="Insert a search term" onChange={updateTerm} value={term} type="text" />
+      <button className={styles.button} type="submit" onClick={updateSearchTerm}>Take Off!</button><br></br>
       </label>
-      <button type="submit" onClick={updateSearchTerm}>Search!</button><br></br>
-      {searchTerm === ''? "Insert a search term" : <CardList term={searchTerm} />}
+      {searchTerm === ''? "" : <CardList term={searchTerm} />}
     </div>
   )
 }

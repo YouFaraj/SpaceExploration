@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import Card from '../Card/Card.jsx';
+import styles from './CardList.modules.css';
 
 const Rover = () => {
   const name = window.location.pathname.substring(1);
@@ -16,9 +17,13 @@ const Rover = () => {
 
   return (
     <div>
-      <h3>Hi! I am {name}, check out my awesome photos!</h3>
-      <label>Choose a different date: <input type="date" value={date} onChange={updateData} /> FYI - {activeDates(name)} </label><br></br>
-      {typeof data === "string" ? data : data.photos.map((elm, index) => <Card key={index} data={elm} />)}
+      <div className={styles.info}>
+        <h3>Hi! I am {name}, check out my awesome photos!</h3>
+        <label>Choose a different date: <input type="date" value={date} onChange={updateData} /> FYI - {activeDates(name)} </label><br></br>
+      </div>
+      <div className={styles.container}>
+        {typeof data === "string" ? data : data.photos.map((elm, index) => <Card key={index} data={elm} />)}
+      </div>
     </div>
 
   )

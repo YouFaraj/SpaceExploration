@@ -1,0 +1,17 @@
+.image {
+  margin: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  width: 27%;
+  border-radius: 13px;
+  background: #323232;
+  box-shadow: -18px 18px 9px #242424, 18px -18px 9px #404040;
+  align-items: center;
+}
+
+.image:hover {
+  border-radius: 13px;
+  background: #323232;
+  box-shadow: inset -18px 18px 9px #242424,
+              inset 18px -18px 9px #404040;
+}
