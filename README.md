@@ -3,7 +3,7 @@
 
 TLDR: This project was created in 24 hours, the goal was to establish one place to access different kind of NASA information relative mainly to mars.
 
-SpaceExpo is an application that makes use of four different NASA APIs. The App breaks down into four different pages: 
+SpaceExpo is an application that makes use of four different NASA APIs. The App breaks down into five different pages: 
 
 - Home: Provides 5 random pictures of the day from the NASA APOD API.
 - APOD: Shows off the current picture of the day with the information from the NASA APOD API.
